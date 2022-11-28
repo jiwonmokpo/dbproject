@@ -39,7 +39,7 @@ public class MemberDAO {
 			return -1;
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
+		} 
 		return -2;
 	}
 	
@@ -55,8 +55,7 @@ public class MemberDAO {
 			return pstmt.executeUpdate();
 		} catch(Exception e) {
 			e.printStackTrace();
-		}
+		} 
 		return -1;
 	}
-
 }

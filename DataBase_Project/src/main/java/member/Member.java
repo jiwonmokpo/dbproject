@@ -4,6 +4,12 @@ package member;
 
 public class Member {
 	
+	private String UserID;
+	private String UserPassword;
+	private String UserName;
+	private String UserGender;
+	private String UserEmail;
+	
 	public String getUserID() {
 		return UserID;
 	}
@@ -34,10 +40,4 @@ public class Member {
 	public void setUserEmail(String userEmail) {
 		UserEmail = userEmail;
 	}
-	private String UserID;
-	private String UserPassword;
-	private String UserName;
-	private String UserGender;
-	private String UserEmail;
-
 }
