@@ -3,6 +3,8 @@
 <%@ page import="java.io.PrintWriter"%>
 <%@ page import="bbs.BbsDAO"%>
 <%@ page import="bbs.Bbs"%>
+<%@ page import="evaluation.Evaluation" %>
+<%@ page import="evaluation.EvaluationDAO" %>
 <%@ page import="java.util.ArrayList"%>
 <%
 	request.setCharacterEncoding("UTF-8");
@@ -57,6 +59,7 @@ a, a:hover {
 		<ul class = "nav navbar-nav">
 			<li><a href="main.jsp">메인</a></li>
 			<li class="active"><a href="bbs.jsp">게시판</a></li>
+			<li><a href="lectureindex.jsp">강의평가</a></li>
 		</ul>
 		<%
 			if(userID == null) {

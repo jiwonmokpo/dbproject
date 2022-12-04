@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import evaluation.Evaluation;
 
 public class EvaluationDAO {
 	private Connection conn;
@@ -244,6 +245,32 @@ public class EvaluationDAO {
 		}
 		return -1;
 	}
+	public ArrayList<Evaluation> getSearchev(String evsearchField, String evsearchText){
+	      ArrayList<Evaluation> evlist = new ArrayList<Evaluation>();
+	      String SQL ="select * from Evaluation WHERE "+evsearchField.trim();
+	      try {
+	            if(evsearchText != null && !evsearchText.equals("") ){
+	                SQL ="SELECT * FROM(SELECT*FROM Evaluation WHERE "+evsearchField.trim()+" LIKE '%"+evsearchText.trim()+"%' ORDER BY EvID DESC) WHERE ROWNUM <=10";
+	            }
+	            PreparedStatement pstmt=conn.prepareStatement(SQL);
+				rs=pstmt.executeQuery();//select
+	         while(rs.next()) {
+	        	Evaluation evaluation = new Evaluation();
+				evaluation.setEvID(rs.getInt(1));
+				evaluation.setSemester(rs.getString(2));
+				evaluation.setRank(rs.getString(3));
+				evaluation.setEvtitle(rs.getString(4));
+				evaluation.setProfessor(rs.getString(5));
+				evaluation.setUserID(rs.getString(6));
+				evaluation.setEvdate(rs.getString(7));
+				evaluation.setEvcontent(rs.getString(8));
+				evlist.add(evaluation);
+	         }         
+	      } catch(Exception e) {
+	         e.printStackTrace();
+	      }
+	      return evlist;
+	   }
 	
 }
 	

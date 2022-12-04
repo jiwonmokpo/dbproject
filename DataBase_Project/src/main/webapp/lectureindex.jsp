@@ -81,16 +81,16 @@
 	</nav>
 	<div class="container">
 		<div class="row">
-			<form method="post" name="search" action="searchbbs.jsp">
+			<form method="post" name="evsearch" action="evsearch.jsp">
 				<table class="pull-right">
 					<tr>
-						<td><select class="from-control" name="searchField">
+						<td><select class="from-control" name="evsearchField">
 							<option value="0">선택</option>
-							<option value="evtitle">강의</option>
-							<option value="memberID">작성자</option>
+							<option value="evtitle">강의명</option>
+							<option value="professor">교수명</option>
 						</select></td>
 						<td>
-							<input type="text" class="form-control" placeholder="검색어 입력" name="searchText" maxlength="100"></td>
+							<input type="text" class="form-control" placeholder="검색어 입력" name="evsearchText" maxlength="100"></td>
 						<td><button type="submit" class="btn btn-success">검색</button></td>
 					</tr>
 				</table>	
