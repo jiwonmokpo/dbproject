@@ -2,11 +2,23 @@ package evaluation;
 
 public class Evaluation {
 	
-	public int getEvaluationID() {
-		return evaluationID;
+	private int evID;
+	private String userID;
+	private String semester;
+	private String rank;
+	private String evtitle;
+	private String professor;
+	private String evdate;
+	private String evcontent;
+	private int evavailable;
+	private int evcount;
+	private int evlike;
+	
+	public int getEvID() {
+		return evID;
 	}
-	public void setEvaluationID(int evaluationID) {
-		this.evaluationID = evaluationID;
+	public void setEvID(int evID) {
+		this.evID = evID;
 	}
 	public String getUserID() {
 		return userID;
@@ -14,108 +26,58 @@ public class Evaluation {
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
-	public String getLectureName() {
-		return lectureName;
+	public String getSemester() {
+		return semester;
 	}
-	public void setLectureName(String lectureName) {
-		this.lectureName = lectureName;
+	public void setSemester(String semester) {
+		this.semester = semester;
 	}
-	public String getProfessorNmae() {
-		return professorNmae;
+	public String getRank() {
+		return rank;
 	}
-	public void setProfessorNmae(String professorNmae) {
-		this.professorNmae = professorNmae;
+	public void setRank(String rank) {
+		this.rank = rank;
 	}
-	public String getLectureYear() {
-		return lectureYear;
+	public String getEvtitle() {
+		return evtitle;
 	}
-	public void setLectureYear(String lectureYear) {
-		this.lectureYear = lectureYear;
+	public void setEvtitle(String evtitle) {
+		this.evtitle = evtitle;
 	}
-	public String getSemesterDivide() {
-		return semesterDivide;
+	public String getProfessor() {
+		return professor;
 	}
-	public void setSemesterDivide(String semesterDivide) {
-		this.semesterDivide = semesterDivide;
+	public void setProfessor(String professor) {
+		this.professor = professor;
 	}
-	public String getEvaluationDivied() {
-		return evaluationDivied;
+	public String getEvdate() {
+		return evdate;
 	}
-	public void setEvaluationDivied(String evaluationDivied) {
-		this.evaluationDivied = evaluationDivied;
+	public void setEvdate(String evdate) {
+		this.evdate = evdate;
 	}
-	public String getEvaluationContent() {
-		return evaluationContent;
+	public String getEvcontent() {
+		return evcontent;
 	}
-	public void setEvaluationContent(String evaluationContent) {
-		this.evaluationContent = evaluationContent;
+	public void setEvcontent(String evcontent) {
+		this.evcontent = evcontent;
 	}
-	public String getTotalScore() {
-		return totalScore;
+	public int getEvavailable() {
+		return evavailable;
 	}
-	public void setTotalScore(String totalScore) {
-		this.totalScore = totalScore;
+	public void setEvavailable(int evavailable) {
+		this.evavailable = evavailable;
 	}
-	public String getCreditScore() {
-		return creditScore;
+	public int getEvcount() {
+		return evcount;
 	}
-	public void setCreditScore(String creditScore) {
-		this.creditScore = creditScore;
+	public void setEvcount(int evcount) {
+		this.evcount = evcount;
 	}
-	public String getComfortableScore() {
-		return comfortableScore;
+	public int getEvlike() {
+		return evlike;
 	}
-	public void setComfortableScore(String comfortableScore) {
-		this.comfortableScore = comfortableScore;
+	public void setEvlike(int evlike) {
+		this.evlike = evlike;
 	}
-	public String getLectureScore() {
-		return lectureScore;
-	}
-	public void setLectureScore(String lectureScore) {
-		this.lectureScore = lectureScore;
-	}
-	public int getLikcecount() {
-		return likcecount;
-	}
-	public void setLikcecount(int likcecount) {
-		this.likcecount = likcecount;
-	}
-	
-	public Evaluation() {
-		
-	}
-	
-	public Evaluation(int evaluationID, String userID, String lectureName, String professorNmae, String lectureYear,
-			String semesterDivide, String evaluationDivied, String evaluationContent, String totalScore,
-			String creditScore, String comfortableScore, String lectureScore, int likcecount) {
-		super();
-		this.evaluationID = evaluationID;
-		this.userID = userID;
-		this.lectureName = lectureName;
-		this.professorNmae = professorNmae;
-		this.lectureYear = lectureYear;
-		this.semesterDivide = semesterDivide;
-		this.evaluationDivied = evaluationDivied;
-		this.evaluationContent = evaluationContent;
-		this.totalScore = totalScore;
-		this.creditScore = creditScore;
-		this.comfortableScore = comfortableScore;
-		this.lectureScore = lectureScore;
-		this.likcecount = likcecount;
-	}
-	int evaluationID;
-	String userID;
-	String lectureName;
-	String professorNmae;
-	String lectureYear;
-	String semesterDivide;
-	String evaluationDivied;
-	String evaluationContent;
-	String totalScore;
-	String creditScore;
-	String comfortableScore;
-	String lectureScore;
-	int likcecount;
-	
-
 }

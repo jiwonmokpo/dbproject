@@ -45,7 +45,7 @@
 		<ul class = "nav navbar-nav">
 			<li><a href="main.jsp">메인</a></li>
 			<li class="active"><a href="bbs.jsp">게시판</a></li>
-			<li class="active"><a href="lectureindex.jsp">강의평가</a></li>
+			<li><a href="lectureindex.jsp">강의평가</a></li>
 		</ul>
 		<%
 			if(userID == null) {
