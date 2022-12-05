@@ -33,6 +33,17 @@
 			<li class="active"><a href="main.jsp">메인</a></li>
 			<li><a href="bbs.jsp">게시판</a></li>
 			<li><a href="lectureindex.jsp">강의평가</a></li>
+						<li class="dropdown">
+					<a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">미니게임<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="ladder.jsp">사다리</a></li>
+						<li><a href="roulette.jsp">룰렛</a></li>
+						<li><a href="speedtest.jsp">반응속도</a></li>
+					</ul>
+				</li>
+			
 		</ul>
 		<%
 			if(userID == null) {
@@ -58,6 +69,8 @@
 						aria-expanded="false">회원관리<span class="caret"></span></a>
 					<ul class="dropdown-menu">
 						<li><a href="logoutAction.jsp">로그아웃</a></li>
+						<li><a href="note.jsp">쪽지보내기</a></li>
+						<li><a href="notebox.jsp">쪽지함</a></li>
 					</ul>
 				</li>
 			</ul>	
