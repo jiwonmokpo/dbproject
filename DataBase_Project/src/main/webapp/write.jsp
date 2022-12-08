@@ -32,7 +32,7 @@
 		<ul class = "nav navbar-nav">
 			<li><a href="main.jsp">메인</a></li>
 			<li class="active"><a href="bbs.jsp">게시판</a></li>
-						<li class="active"><a href="lectureindex.jsp">강의평가</a></li>
+						<li><a href="index.jsp">강의평가</a></li>
 			<li class="dropdown">
 					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -99,7 +99,6 @@
 		<form action = "uploadAction.jsp" method="post" enctype="multipart/form-data">
 		<input type="file" name="file"><br>
 		<input type="submit" value="업로드"><br>
-		<a href="fileDownload.jsp">파일 다운로드 페이지</a>
 		</form>
 		</div>	
 	</div>

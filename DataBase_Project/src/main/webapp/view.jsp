@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.io.PrintWriter" %> 
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.io.File" %> 
 <%@ page import="bbs.Bbs" %>
 <%@ page import="bbs.BbsDAO" %>
+<%@ page import="file.FileDAO" %> 
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %> 
 <%@ page import="bbscomment.Bbscomment" %>
 <%@ page import="bbscomment.BbscommentDAO" %>
 <%@ page import="java.util.ArrayList" %>
@@ -126,6 +130,19 @@
 					<tr>
 						<td>조회수</td>
 						<td colspan="2"><%= bbs.getBbsCount() + 1 %></td>
+					</tr>
+					<tr>
+						<td>파일명</td>
+						<td colspan="2"><% 
+								String directory = "C:/dbupload";
+								String files[] = new File(directory).list();
+		
+								for(String file : files) {
+									out.write("<a href=\"" + request.getContextPath() + "/downloadAction?file=" +
+										java.net.URLEncoder.encode(file, "UTF-8") + "\">" + file + "</a><br>");
+			
+								}
+							%></td>
 					</tr>
 					<tr>
 						<td>내용</td>

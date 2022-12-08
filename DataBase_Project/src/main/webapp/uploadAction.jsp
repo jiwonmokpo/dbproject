@@ -1,9 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page import="file.FileDAO" %> 
 <%@ page import="java.io.File" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
-<%@ page import="com.oreilly.servlet.MultipartRequest" %>    
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="bbs.Bbs" %> 
+<%@ page import="bbs.BbsDAO" %>     
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,12 +22,15 @@
 		int maxSize = 1024 * 1024 * 100; //100MB limit
 		String encoding = "UTF-8";
 		
+		Bbs bbs = new Bbs();
+		
 		MultipartRequest multipartRequest
 		= new MultipartRequest(request, directory, maxSize, encoding,
 				new DefaultFileRenamePolicy());
 		
 		String fileName = multipartRequest.getOriginalFileName("file");
 		String fileRealName = multipartRequest.getFilesystemName("file");
+		int bbsId = bbs.getBbsID();
 		
 		if( 
 			!fileName.endsWith(".docx") &&
@@ -40,8 +46,12 @@
 			out.write("업로드할 수 없는 확장자입니다.");
 		} else {
 			new FileDAO().upload(fileName, fileRealName);
-			out.write("파일명 : " + fileName + "<br>");
-			out.write("실제 파일명 : " + fileRealName + "<br>");
+			PrintWriter script = response.getWriter();
+			script.println("<script>");
+			script.println("alert('업로드 성공!')");
+			script.println("history.back()");
+			script.println("</script>");
+			
 		}
 	%>
 </body>

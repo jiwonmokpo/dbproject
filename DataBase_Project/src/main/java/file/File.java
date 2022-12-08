@@ -4,11 +4,13 @@ public class File {
 	
 	String fileName;
 	String fileRealName;
-	
-	public File(String fileName, String fileRealName) {
+	int bbsID;
+
+	public File(String fileName, String fileRealName, int bbsID) {
 		super();
 		this.fileName = fileName;
 		this.fileRealName = fileRealName;
+		this.bbsID = bbsID;
 	}
 	
 	public String getFileName() {
@@ -22,5 +24,11 @@ public class File {
 	}
 	public void setFileRealName(String fileRealName) {
 		this.fileRealName = fileRealName;
+	}
+	public int getBbsID() {
+		return bbsID;
+	}
+	public void setBbsID(int bbsID) {
+		this.bbsID = bbsID;
 	}
 }
