@@ -1,43 +1,52 @@
 package member;
 
-//Java beans
-
 public class Member {
+	String userID;
+	String userPassword;
+	String userEmail;
+	String userEmailHash;
+	int userEmailChecked;
 	
-	private String UserID;
-	private String UserPassword;
-	private String UserName;
-	private String UserGender;
-	private String UserEmail;
+	public Member() {
+	}
+	
+	public Member(String userID, String userPassword, String userEmail, String userEmailHash, int userEmailChecked) {
+		super();
+		this.userID = userID;
+		this.userPassword = userPassword;
+		this.userEmail = userEmail;
+		this.userEmailHash = userEmailHash;
+		this.userEmailChecked = userEmailChecked;
+	}
 	
 	public String getUserID() {
-		return UserID;
+		return userID;
 	}
 	public void setUserID(String userID) {
-		UserID = userID;
+		this.userID = userID;
 	}
 	public String getUserPassword() {
-		return UserPassword;
+		return userPassword;
 	}
 	public void setUserPassword(String userPassword) {
-		UserPassword = userPassword;
-	}
-	public String getUserName() {
-		return UserName;
-	}
-	public void setUserName(String userName) {
-		UserName = userName;
-	}
-	public String getUserGender() {
-		return UserGender;
-	}
-	public void setUserGender(String userGender) {
-		UserGender = userGender;
+		this.userPassword = userPassword;
 	}
 	public String getUserEmail() {
-		return UserEmail;
+		return userEmail;
 	}
 	public void setUserEmail(String userEmail) {
-		UserEmail = userEmail;
+		this.userEmail = userEmail;
 	}
+	public String getUserEmailHash() {
+		return userEmailHash;
+	}
+	public void setUserEmailHash(String userEmailHash) {
+		this.userEmailHash = userEmailHash;
+	}
+	public int isUserEmailChecked() {
+		return userEmailChecked;
+	}
+	public void setUserEmailChecked(int userEmailChecked) {
+		this.userEmailChecked = userEmailChecked;
+	}	
 }

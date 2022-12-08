@@ -3,7 +3,7 @@ const ctx = $c.getContext(`2d`);
 
 
 const product = [
-  "1", '2', "3", "4", "5", "6", '7', "8", "9",
+  "컵밥", '부리또', "순대국밥", "짜장면/짬뽕", "백반", "돈까스", '국수/우동', "치킨/피자", "떡볶이/순대",
 ];
 
 const colors = ["#dc0936", "#e6471d", "#f7a416", "#efe61f ", "#60b236", "#209b6c", "#169ed8", "#3f297e", "#87207b", "#be107f", "#e7167b"];
@@ -32,7 +32,7 @@ const newMake = () => {
 
       ctx.translate(
         cw + Math.cos(angle) * (cw - 50),
-        ch + Math.sin(angle) * (ch - 50),
+        ch + Math.sin(angle) * (ch - 50)
       );
 
       ctx.rotate(angle + Math.PI / 2);
@@ -59,7 +59,7 @@ const rotate = () => {
     $c.style.transform = `rotate(-${rotate}deg)`;
     $c.style.transition = `2s`;
     
-    setTimeout(() => alert(`오늘의 야식은?! ${product[ran]} 어떠신가요?`), 2000);
+    setTimeout(() => alert(`오늘의 점심메뉴는?! ${product[ran]} 어떠신가요?`), 2000);
   }, 1);
 };
 

@@ -7,7 +7,13 @@
 <meta name="veiwport" content = "width=device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
-<title>미니게임 사이트</title>
+<title>MNU Town</title>
+<style>
+   body {
+   background-image: url('image/v1051-30b.jpg');
+   background-size: cover;
+   }
+</style>
 </head>
 <body>
 	<% 
@@ -25,13 +31,13 @@
 				<span class ="icon-bar"></span>
 				<span class ="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="main.jsp">JSP 게시판 웹 사이트</a>
+			<a class="navbar-brand" href="main.jsp">MNU Town</a>
 		</div>
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class = "nav navbar-nav">
-			<li class="active"><a href="main.jsp">메인</a></li>
+			<li><a href="main.jsp">메인</a></li>
 			<li><a href="bbs.jsp">게시판</a></li>
-			<li><a href="lectureindex.jsp">강의평가</a></li>
+			<li><a href="index.jsp">강의평가</a></li>
 						<li class="dropdown">
 					<a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -53,8 +59,8 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">접속하기<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="login.jsp">로그인</a></li>
-						<li><a href="join.jsp">회원가입</a></li>
+						<li><a href="userLogin.jsp">로그인</a></li>
+						<li><a href="userJoin.jsp">회원가입</a></li>
 					</ul>
 				</li>
 			</ul>	
@@ -67,7 +73,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">회원관리<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="logoutAction.jsp">로그아웃</a></li>
+						<li><a href="userLoginAction.jsp">로그아웃</a></li>
 						<li><a href="note.jsp">쪽지보내기</a></li>
 						<li><a href="notebox.jsp">쪽지함</a></li>
 					</ul>
@@ -77,10 +83,15 @@
 			}
 		%>
 		</div>
-	</nav>
-		<div style="position: absolute;left: 30%;top:10%;">
+	</nav><div>
+	<h3 style="text-align: center;">룰렛을 돌려주세요</h3>
+	</div>
+		<div style="position: absolute;left:33%;top:20%;">
  		 	<canvas width="380" height='380'></canvas>  
-  			<button onclick="rotate()">룰렛 돌리기</button>
+
+
+  			<button onclick="rotate()"; type="button" class="btn btn-primary">룰렛 돌리기</button>
+
 		</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

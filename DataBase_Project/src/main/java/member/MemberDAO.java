@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import util.DatabaseUtil;
 
 public class MemberDAO {
 	
@@ -22,7 +23,6 @@ public class MemberDAO {
 			
 		}
 	}
-	
 	public int login(String userID, String userPassword) {
 		String SQL = "SELECT userPassword FROM MEMBER WHERE userID = ?";
 		try {
@@ -43,19 +43,103 @@ public class MemberDAO {
 		return -2;
 	}
 	
-	public int join(Member member) {
-		String SQL = "INSERT INTO MEMBER VALUES (?, ?, ?, ?, ?)";
+	public int join (Member user) {
+		String sql = "INSERT INTO MEMBER VALUES (?, ?, ?, ?, 0)";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 		try {
-			pstmt = conn.prepareStatement(SQL);
-			pstmt.setString(1, member.getUserID());
-			pstmt.setString(2, member.getUserPassword());
-			pstmt.setString(3, member.getUserName());
-			pstmt.setString(4, member.getUserGender());
-			pstmt.setString(5, member.getUserEmail());
-			return pstmt.executeUpdate();
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getUserID());
+			pstmt.setString(2, user.getUserPassword());
+			pstmt.setString(3, user.getUserEmail());
+			pstmt.setString(4, user.getUserEmailHash());
+			return pstmt.executeUpdate(); 
 		} catch(Exception e) {
 			e.printStackTrace();
-		} 
-		return -1;
+		} finally {
+			try { if(conn != null) conn.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(pstmt != null) pstmt.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(rs != null) rs.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+		}
+		return -1; //회원가입 실패(중복된 아이디)
+	}
+	
+	public String getUserEmail (String userID) {
+		String sql = "SELECT userEmail FROM MEMBER WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next())
+				return rs.getString(1);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try { if(conn != null) conn.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(pstmt != null) pstmt.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(rs != null) rs.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+		}
+		return null; 
+	}
+	
+	public int getUserEmailChecked (String userID) {
+		String sql = "SELECT userEmailChecked FROM MEMBER WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userID);
+			rs = pstmt.executeQuery();
+			if(rs.next())
+				return rs.getInt(1);
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try { if(conn != null) conn.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(pstmt != null) pstmt.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(rs != null) rs.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+		}
+		return 0; 
+	}
+	
+	public int setUserEmailChecked (String userID) {
+		String sql = "UPDATE MEMBER SET userEmailChecked = 1 WHERE userID = ?";
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = DatabaseUtil.getConnection();
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userID);
+			pstmt.executeUpdate();
+			return 1;
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			try { if(conn != null) conn.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(pstmt != null) pstmt.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+			try { if(rs != null) rs.close(); }
+			catch (Exception e) { e.printStackTrace(); }
+		}
+		return 0;
 	}
 }

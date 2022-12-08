@@ -1,24 +1,50 @@
 package evaluation;
 
 public class Evaluation {
+	int evaluationID;
+	String userID;
+	String lectureName;
+	String professorName;
+	int lectureYear;
+	String semesterDivide;
+	String lectureDivide;
+	String evaluationTitle;
+	String evaluationContent;
+	String totalScore;
+	String creditScore;
+	String comfortableScore;
+	String lectureScore;
+	int likeCount;
 	
-	private int evID;
-	private String userID;
-	private String semester;
-	private String rank;
-	private String evtitle;
-	private String professor;
-	private String evdate;
-	private String evcontent;
-	private int evavailable;
-	private int evcount;
-	private int evlike;
-	
-	public int getEvID() {
-		return evID;
+	public Evaluation() {
+		
 	}
-	public void setEvID(int evID) {
-		this.evID = evID;
+	
+	public Evaluation(int evaluationID, String userID, String lectureName, String professorName, int lectureYear,
+			String semesterDivide, String lectureDivide, String evaluationTitle, String evaluationContent,
+			String totalScore, String creditScore, String comfortableScore, String lectureSrcore, int likeCount) {
+		super();
+		this.evaluationID = evaluationID;
+		this.userID = userID;
+		this.lectureName = lectureName;
+		this.professorName = professorName;
+		this.lectureYear = lectureYear;
+		this.semesterDivide = semesterDivide;
+		this.lectureDivide = lectureDivide;
+		this.evaluationTitle = evaluationTitle;
+		this.evaluationContent = evaluationContent;
+		this.totalScore = totalScore;
+		this.creditScore = creditScore;
+		this.comfortableScore = comfortableScore;
+		this.lectureScore = lectureSrcore;
+		this.likeCount = likeCount;
+	}
+	
+	public int getEvaluationID() {
+		return evaluationID;
+	}
+	public void setEvaluationID(int evaluationID) {
+		this.evaluationID = evaluationID;
 	}
 	public String getUserID() {
 		return userID;
@@ -26,58 +52,79 @@ public class Evaluation {
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
-	public String getSemester() {
-		return semester;
+	public String getLectureName() {
+		return lectureName;
 	}
-	public void setSemester(String semester) {
-		this.semester = semester;
+	public void setLectureName(String lectureName) {
+		this.lectureName = lectureName;
 	}
-	public String getRank() {
-		return rank;
+	public String getProfessorName() {
+		return professorName;
 	}
-	public void setRank(String rank) {
-		this.rank = rank;
+	public void setProfessorName(String professorName) {
+		this.professorName = professorName;
 	}
-	public String getEvtitle() {
-		return evtitle;
+	public int getLectureYear() {
+		return lectureYear;
 	}
-	public void setEvtitle(String evtitle) {
-		this.evtitle = evtitle;
+	public void setLectureYear(int lectureYear) {
+		this.lectureYear = lectureYear;
 	}
-	public String getProfessor() {
-		return professor;
+	public String getSemesterDivide() {
+		return semesterDivide;
 	}
-	public void setProfessor(String professor) {
-		this.professor = professor;
+	public void setSemesterDivide(String semesterDivide) {
+		this.semesterDivide = semesterDivide;
 	}
-	public String getEvdate() {
-		return evdate;
+	public String getLectureDivide() {
+		return lectureDivide;
 	}
-	public void setEvdate(String evdate) {
-		this.evdate = evdate;
+	public void setLectureDivide(String lectureDivide) {
+		this.lectureDivide = lectureDivide;
 	}
-	public String getEvcontent() {
-		return evcontent;
+	public String getEvaluationTitle() {
+		return evaluationTitle;
 	}
-	public void setEvcontent(String evcontent) {
-		this.evcontent = evcontent;
+	public void setEvaluationTitle(String evaluationTitle) {
+		this.evaluationTitle = evaluationTitle;
 	}
-	public int getEvavailable() {
-		return evavailable;
+	public String getEvaluationContent() {
+		return evaluationContent;
 	}
-	public void setEvavailable(int evavailable) {
-		this.evavailable = evavailable;
+	public void setEvaluationContent(String evaluationContent) {
+		this.evaluationContent = evaluationContent;
 	}
-	public int getEvcount() {
-		return evcount;
+	public String getTotalScore() {
+		return totalScore;
 	}
-	public void setEvcount(int evcount) {
-		this.evcount = evcount;
+	public void setTotalScore(String totalScore) {
+		this.totalScore = totalScore;
 	}
-	public int getEvlike() {
-		return evlike;
+	public String getCreditScore() {
+		return creditScore;
 	}
-	public void setEvlike(int evlike) {
-		this.evlike = evlike;
+	public void setCreditScore(String creditScore) {
+		this.creditScore = creditScore;
 	}
+	public String getComfortableScore() {
+		return comfortableScore;
+	}
+	public void setComfortableScore(String comfortableScore) {
+		this.comfortableScore = comfortableScore;
+	}
+	public String getLectureScore() {
+		return lectureScore;
+	}
+	public void setLectureScore(String lectureScore) {
+		this.lectureScore = lectureScore;
+	}
+	public int getLikeCount() {
+		return likeCount;
+	}
+	public void setLikeCount(int likeCount) {
+		this.likeCount = likeCount;
+	}
+	
+	
+	
 }
