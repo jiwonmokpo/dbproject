@@ -30,15 +30,33 @@
 	}
 %>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="index.jsp">강의평가 웹 사이트</a>
+		<a class="navbar-brand" href="main.jsp">MNU Town</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div id="navbar" class="collapse navbar-collapse">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="index.jsp">메인</a>
+					<a class="nav-link" href="main.jsp">메인</a>
 				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="bbs.jsp">게시판</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="index.jsp">강의평가</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown">
+						미니게임
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdown">
+					<a class="dropdown-item" href="ladder.jsp">사다리타기</a>
+					<a class="dropdown-item" href="roulette.jsp">룰렛</a>
+					<a class="dropdown-item" href="speedtest.jsp">스피드테스트</a>
+					</div>
+					</li>
+				</div>	
+				<ul class = "nav navbar-nav navbar-right">
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" id="dropdown" data-toggle="dropdown">
 						회원관리
@@ -59,10 +77,6 @@
 					</div>
 				</li>
 			</ul>
-			<form action="./index.jsp" method="get" class="form-inline my-2 my-lg-0">
-				<input type="text" name="search" class="form-control mr-sm-2" type="search" placeholder="내용을 입력하세요." aria-label="Search"/>
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">검색</button>
-			</form>
 	</nav>
 	<section class="container mt-3" style="max-width: 560px;">
 		<div class="alert alert-warning mt-4" role="alert">

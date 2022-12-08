@@ -96,6 +96,11 @@
 			</table>
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 		</form>
+		<form action = "uploadAction.jsp" method="post" enctype="multipart/form-data">
+		<input type="file" name="file"><br>
+		<input type="submit" value="업로드"><br>
+		<a href="fileDownload.jsp">파일 다운로드 페이지</a>
+		</form>
 		</div>	
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

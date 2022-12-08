@@ -108,18 +108,9 @@ request.setCharacterEncoding("UTF-8");
 	</nav>
 	<section class="container">
 		<form method="get" action="./index.jsp" class="form-inline mt-3">
-			<select name="lectureDivide" class="form-control mx-1 mt-2">
-				<option value="전체">전체</option>
-				<option value="전공" <% if(lectureDivide.equals("전공")) out.println("selected"); %>>전공</option>
-				<option value="교양" <% if(lectureDivide.equals("교양")) out.println("selected"); %>>교양</option>
-				<option value="기타" <% if(lectureDivide.equals("기타")) out.println("selected"); %>>기타</option>
-			</select>
-			<select name="searchType" class="form-control mx-1 mt-2">
-				<option value="최신순">최신순</option>
-				<option value="추천순" <% if(lectureDivide.equals("추천순")) out.println("selected"); %>>추천순</option>
-			</select>
-			<input type="text" name="search" class="form-control mx-1 mt-2" placeholder="아내용을 입력하세요."/>
-			<button type="submit" class="btn btn-primary mx-1 mt-2">검색</button>
+			
+			
+			
 			<a class="btn btn-primary mx-1 mt-2" data-toggle="modal" href="#registerModal">등록하기</a>
 			<a class="btn btn-danger mx-1 mt-2" data-toggle="modal" href="#reportModal">신고</a>
 		</form>
