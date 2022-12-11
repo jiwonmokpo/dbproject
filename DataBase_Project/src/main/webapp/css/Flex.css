@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.flexcontainer{
+    display: flex;
+}
+.flex{
+    flex-basis: 10%;
+    min-width:0;
+}

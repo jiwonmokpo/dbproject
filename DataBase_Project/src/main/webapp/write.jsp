@@ -8,6 +8,8 @@
 <meta name="veiwport" content = "width=device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/Fileupload.css">
+<link rel="stylesheet" href="flex.css">
 <title>MNU Town</title>
 </head>
 <body>
@@ -67,7 +69,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">회원관리<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="userLoginAction.jsp">로그아웃</a></li>
+						<li><a href="userLogout.jsp">로그아웃</a></li>
 					</ul>
 				</li>
 			</ul>	
@@ -97,11 +99,11 @@
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 		</form>
 		<form action = "uploadAction.jsp" method="post" enctype="multipart/form-data">
-		<input type="file" name="file"><br>
+   		<input type="file" name="file"><br>
 		<input type="submit" value="업로드"><br>
 		</form>
-		</div>	
-	</div>
+		</div>
+		</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>

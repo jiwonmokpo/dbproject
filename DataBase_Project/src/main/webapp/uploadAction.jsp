@@ -18,11 +18,9 @@
 </head>
 <body>
 	<%
-		String directory = "C:/dbupload";
+		String directory = application.getRealPath("/upload/");
 		int maxSize = 1024 * 1024 * 100; //100MB limit
 		String encoding = "UTF-8";
-		
-		Bbs bbs = new Bbs();
 		
 		MultipartRequest multipartRequest
 		= new MultipartRequest(request, directory, maxSize, encoding,
@@ -30,7 +28,6 @@
 		
 		String fileName = multipartRequest.getOriginalFileName("file");
 		String fileRealName = multipartRequest.getFilesystemName("file");
-		int bbsId = bbs.getBbsID();
 		
 		if( 
 			!fileName.endsWith(".docx") &&

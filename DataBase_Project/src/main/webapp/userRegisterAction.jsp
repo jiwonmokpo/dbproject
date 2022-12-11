@@ -6,8 +6,8 @@
 <%
 request.setCharacterEncoding("UTF-8");
 	String userID = null;
-	if(session.getAttribute("userID") != null) {
-		userID = (String) session.getAttribute("userID");
+	if(session.getAttribute("memberID") != null) {
+		userID = (String) session.getAttribute("memberID");
 	}
 	if(userID != null) {
 		PrintWriter script = response.getWriter();

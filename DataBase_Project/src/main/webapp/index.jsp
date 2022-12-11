@@ -108,9 +108,6 @@ request.setCharacterEncoding("UTF-8");
 	</nav>
 	<section class="container">
 		<form method="get" action="./index.jsp" class="form-inline mt-3">
-			
-			
-			
 			<a class="btn btn-primary mx-1 mt-2" data-toggle="modal" href="#registerModal">등록하기</a>
 			<a class="btn btn-danger mx-1 mt-2" data-toggle="modal" href="#reportModal">신고</a>
 		</form>
@@ -139,13 +136,13 @@ request.setCharacterEncoding("UTF-8");
 				<div class="row">
 					<div class="col-9 text-left">
 						성적<span style="color:red;"><%= evaluation.getCreditScore()%></span>
-						널널<span style="color:red;"><%= evaluation.getComfortableScore()%></span>
-						강의<span style="color:red;"><%= evaluation.getLectureScore()%></span>
+						만족도<span style="color:red;"><%= evaluation.getComfortableScore()%></span>
+						강의수준<span style="color:red;"><%= evaluation.getLectureScore()%></span>
 						<span style="color: green;">(추천 : <%= evaluation.getLikeCount()%>)</span>
 					</div>
 					<div class="col-3 text-right">
 						<a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?evaluationID=<%= evaluation.getEvaluationID()%>">추천</a>
-						<a onclick="return confirm('삭제하시겠습니까?')" href="./deleteAction.jsp?evaluationID=<%= evaluation.getEvaluationID()%>">삭제</a>
+						<a onclick="return confirm('삭제하시겠습니까?')" href="./evdeleteAction.jsp?evaluationID=<%= evaluation.getEvaluationID()%>">삭제</a>
 					</div>
 				</div>
 			</div>
@@ -196,7 +193,7 @@ request.setCharacterEncoding("UTF-8");
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="./evaluationRegisterAction.jsp" method="post">
+					<form action="msgAction" method="post">
 						<div class="form-row">
 							<div class="form-group col-sm-6">
 								<label>강의명</label>
@@ -274,7 +271,7 @@ request.setCharacterEncoding("UTF-8");
 								</select>
 							</div>
 							<div class="form-group col-sm-3">
-								<label>널널</label>
+								<label>만족도</label>
 								<select name="comfortableScore" class="form-control">
 									<option value="A" selected>A</option>
 									<option value="B">B</option>
@@ -284,7 +281,7 @@ request.setCharacterEncoding("UTF-8");
 								</select>
 							</div>
 							<div class="form-group col-sm-3">
-								<label>강의</label>
+								<label>강의 수준</label>
 								<select name="lectureScore" class="form-control">
 									<option value="A" selected>A</option>
 									<option value="B">B</option>
