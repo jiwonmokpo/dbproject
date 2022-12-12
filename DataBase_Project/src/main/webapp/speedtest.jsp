@@ -28,6 +28,10 @@
       #screen.now {
         background-color: greenyellow;
       }
+      body {
+  		background-image: url('image/v1051-30b.jpg');
+   		background-size: cover;
+   }
     </style>
 </head>
 <body>

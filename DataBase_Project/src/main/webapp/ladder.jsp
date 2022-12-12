@@ -93,19 +93,19 @@
 </div>
     <div style="dispslay: inline-block;width: 602px;height: 402px;position: absolute;left:25%;top:10%;">
         	    <div>
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
+        <input size="8" type= "text" value = 1>
+        <input size="8" type= "text" value = 2>
+        <input size="8" type= "text" value = 3>
+        <input size="8" type= "text" value = 4>
+        <input size="8" type= "text" value = 5>
         </div>
         <canvas id='canvas' width="600" height="400"> </canvas>
         <div>
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
-        <input size="8" type= "text">
+        <input size="8" type= "text" value = "팀장">
+        <input size="8" type= "text" value = "팀원">
+        <input size="8" type= "text" value = "팀원">
+        <input size="8" type= "text" value = "팀원">
+        <input size="8" type= "text" value = "팀원">
         </div>
         <div>
             <br>
