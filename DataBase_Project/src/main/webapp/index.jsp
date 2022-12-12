@@ -193,7 +193,7 @@ request.setCharacterEncoding("UTF-8");
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="msgAction" method="post">
+					<form action="evaluationRegisterAction.jsp" method="post">
 						<div class="form-row">
 							<div class="form-group col-sm-6">
 								<label>강의명</label>
