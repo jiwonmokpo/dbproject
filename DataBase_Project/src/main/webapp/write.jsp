@@ -98,12 +98,13 @@
 			</table>
 			<input type="submit" class="btn btn-primary pull-right" value="글쓰기">
 		</form>
-		<form action = "uploadAction.jsp" method="post" enctype="multipart/form-data">
-   		<input type="file" name="file"><br>
-		<input type="submit" value="업로드"><br>
+			<form action = "uploadAction.jsp" method="post" enctype="multipart/form-data">
+   			<div class = "flex"><input type="file" name="file" id="file"></div>
+			<div class = "flex"><input type="submit" value = "업로드" class="upload"></div>
 		</form>
 		</div>
 		</div>
+	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.js"></script>
 </body>

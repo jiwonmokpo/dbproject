@@ -122,7 +122,8 @@ request.setCharacterEncoding("UTF-8");
 		<div class="card bg-light mt-3">
 			<div class="card-header bg-light">
 				<div class="row">
-					<div class="col-8 text-left"><%= evaluation.getLectureName()%>&nbsp;<small><%= evaluation.getProfessorName()%></small></div>
+					<div class="col-8 text-left"><%= evaluation.getLectureName()%>&nbsp;<small><%= evaluation.getProfessorName()%></small>
+					<small>(<%= evaluation.getLectureDivide()%>)</small></div>
 					<div class="col-4 text-right">
 						종합<span style="color: red;"><%= evaluation.getTotalScore() %></span>
 					</div>
@@ -131,6 +132,7 @@ request.setCharacterEncoding("UTF-8");
 			<div class="card-body">
 				<h5 class="card-title">
 					<%= evaluation.getEvaluationTitle() %>&nbsp;<small>(<%= evaluation.getLectureYear()%>년 <%= evaluation.getSemesterDivide()%>)</small>
+					
 				</h5>
 				<p class="card-text"><%= evaluation.getEvaluationContent()%>
 				<div class="row">
@@ -235,9 +237,9 @@ request.setCharacterEncoding("UTF-8");
 							<div class="form-group col-sm-4">
 								<label>강의 구분</label>
 								<select name="lectureDivide" class="form-control">
-									<option value="전공" selected>전공</option>
-									<option value="교양">교양</option>
-									<option value="기타">기타</option>
+									<option value="전공필수" selected>전공필수</option>
+									<option value="전공선택">전공선택</option>
+									<option value="전공교양">전공교양</option>
 								</select>
 							</div>
 						</div>

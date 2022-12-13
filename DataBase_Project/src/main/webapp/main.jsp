@@ -99,6 +99,7 @@
 		%>
 		</div>
 	</nav>
+	<!-- 더보기 페이지 -->
 	<div class="container">
 		<div class="jumbotron">
 			<div class="container">
@@ -108,6 +109,9 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
 	
 	<!-- 쪽지기능 -->
 	<div class="modal fade" id="msgModal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
