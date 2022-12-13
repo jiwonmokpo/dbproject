@@ -95,10 +95,10 @@
 			<form method="post" name="search" action="searchbbs.jsp">
 				<table class="pull-right">
 					<tr>
-						<td><select class="from-control" name="searchField">
-							<option value="0">선택</option>
-							<option value="bbsTitle">제목</option>
-							<option value="memberID">작성자</option>
+						<td><select class="form-control" name="searchField">
+							<option value="0" class ="btn btn-primary" style="text-align-last:center">선택</option>
+							<option value="bbsTitle" style="text-align-last:center">제목</option>
+							<option value="userID" style="text-align-last:center">작성자</option>
 						</select></td>
 						<td>
 							<input type="text" class="form-control" placeholder="검색어 입력" name="searchText" maxlength="100"></td>
